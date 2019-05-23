@@ -2,16 +2,17 @@ from time import *
 import random
 from random import *
 import random
-whySoGood = ["Amazing! But why was it so good?","","","","",""]
+whySoGood = ["Amazing! But why was it so good?","Thats sick! But why was it so good?"]
 
-amazedExpressions = ["","","","","","","","",""]
+amazedExpressions = ["Sick!","Wow!","Mad!","Awesome!","Madness!","Jheez!","Great!"]
 
 hopeGetsBetter = ["I Hope it gets better...",
                   "If your day hasn't been the greatest, I can try and make you laugh? Type 'joke' for me to giver you a joke",
                   "Ah that's not good is it! Just try and look at the bright side of things :)"
                   ]
 
-hello = ["Sat Sri Akaal","Assalamualaikum",
+hello = [
+        "Sat Sri Akaal","Assalamualaikum",
          "Namaste","Bonjour","¡Hola","Konnichiwa",
          "Guten Tag","Nǐn hǎo","Privet","Ahoj",
          "Dzień Dobry","yeh wot fam",
@@ -20,7 +21,8 @@ hello = ["Sat Sri Akaal","Assalamualaikum",
          "safwaan"
          ]
 
-failure = ["Sorry. I don't know.",
+failure = [
+           "Sorry. I don't know.",
            "Sorry. I do not understand that command.",
            "Sorry, I am not advanced enough to read your mind.",
            "I don't think that's possible.",
@@ -55,19 +57,18 @@ while True:
     if command in ("set alarm","alarm","alarm set","turn on an alarm","make an alarm","create an alarm"):
         alarmDate = input("\nWhat date would you like to set your alarm for?(dd/mm/yy)\n>>> ")
         alarmTime = input("What time would you like to set your alarm for?(hh:mm)\n>>> ".format(alarmDate))
-
         print("Your alarm has been successfully set on {}, at {}.".format(alarmDate,alarmTime))
-
-    if command in ("","","","","","")
 
     if command in ("hello","hi","hey","hola","sat sri akaal"):
         print(random.choice(hello)+"!"+" How are you?")
         response_hello = input(">>> ")
         if 'bad' or 'not good' or 'not great' or 'terrible' or 'rubbish' or 'crappy' or 'crap' or 'dead' in response_hello:
-            response_responseHello = input((whySoGood)+"\n>>> ".format(response_hello))
-            print(amazedExpressions)
+            response_responseHello = input((random.choice(whySoGood))+"\n>>> ".format(response_hello))
+            print(random.choice(hopeGetsBetter))
+           
         elif 'good' or 'great' or 'amazing' or 'very good' in response_hello:
-            WhatDidYouDue- = input("That's amazing! What exicting things did you do today?\n>>> ")
+            WhatDidYouDo = input("That's amazing! What exicting things did you do today?\n>>> ")
+            print(random.choice(amazedExpressions))
 
     else:
         print(random.choice(failure))
